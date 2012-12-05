@@ -554,6 +554,11 @@ module Git
       self.lib.branch_current
     end
 
+    # returns true or false is the repo is currently locked
+    def locked?
+        self.lib.locked?
+    end
+
     
   end
   

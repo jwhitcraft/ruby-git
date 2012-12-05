@@ -726,6 +726,10 @@ module Git
       (self.current_command_version <=>  self.required_command_version) >= 0
     end
 
+    def locked?
+        filename = File.join(@git_dir, 'index.lock')
+        File.exist?(filename)
+    end
 
     private
     
